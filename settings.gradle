@@ -1,0 +1,3 @@
+include ':animalMatching_SDK'
+include ':app'
+rootProject.name = "hlhj_SDK"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hlhj_trans">#00FFFFFF</color>
+    <color name="hlhj_mask_white">#26FFFFFF</color>
+    <color name="hlhj_mask50_white">#80FFFFFF</color>
+    <color name="hlhj_white">#fff</color>
+    <color name="hlhj_normal_primary">#7EA3FA</color>
+    <color name="hlhj_normal_gradient_1">#7EA3FA</color>
+    <color name="hlhj_normal_gradient_2">#8154FF</color>
+    <color name="hlhj_black">#333333</color>
+    <color name="hlhj_gray">#FF999999</color>
+</resources>
