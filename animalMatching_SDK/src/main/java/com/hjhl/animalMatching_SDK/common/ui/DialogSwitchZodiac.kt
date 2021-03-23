@@ -2,6 +2,7 @@ package com.hjhl.animalMatching_SDK.common.ui
 
 import android.app.Dialog
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.*
@@ -10,14 +11,14 @@ import com.hjhl.animalMatching_SDK.common.adapter.GVAdapter
 import com.hjhl.animalMatching_SDK.common.model.Zodiac
 import com.hjhl.animalMatching_SDK.common.model.getZodiac
 
-class DialogSwitchZodiac(context: Context, themeResId: Int,tag: Int) : Dialog(context, themeResId) {
+class DialogSwitchZodiac(context: Context, themeResId: Int,mainColor: Int) : Dialog(context, themeResId) {
 
     private val mList:List<String> = listOf("鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪")
     private var dataList: MutableList<Zodiac>? = null
     private lateinit var dialogListener: DialogListener
-    private var mTag = -1
+    private var mColor:Int = Color.parseColor("#7EA3FA")
     init {
-        mTag = tag
+        this.mColor = mainColor
     }
 
     fun setDialogListener(listener: DialogListener) {
@@ -25,7 +26,7 @@ class DialogSwitchZodiac(context: Context, themeResId: Int,tag: Int) : Dialog(co
     }
 
     interface DialogListener {
-        fun getItem(name: String,tag: Int)
+        fun getItem(name: String)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +47,7 @@ class DialogSwitchZodiac(context: Context, themeResId: Int,tag: Int) : Dialog(co
         val inflater = LayoutInflater.from(context).inflate(R.layout.hlhj_dialog_switch_zodiac,null)
         val tvCancel = inflater.findViewById(R.id.hlhj_tv_cancel) as TextView
         val gvList = inflater.findViewById(R.id.hlhj_gv_list) as GridView
-        gvList.adapter = GVAdapter(context,dataList)
+        gvList.adapter = GVAdapter(context,dataList,mColor)
         setContentView(inflater)
         val dialogWindow: Window? = this.window
         dialogWindow?.setGravity(Gravity.BOTTOM)
@@ -54,7 +55,7 @@ class DialogSwitchZodiac(context: Context, themeResId: Int,tag: Int) : Dialog(co
         lp?.width = WindowManager.LayoutParams.MATCH_PARENT
         dialogWindow?.attributes = lp
         gvList.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            dialogListener.getItem(mList[position],mTag)
+            dialogListener.getItem(mList[position])
             dismiss()
         }
         tvCancel.setOnClickListener {

@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun onclick() {
         btn.setOnClickListener {
+            ZMKit.initSDK("123456464")
+            ZMKit.setColor("#FF018786","#FFBB86FC","#FF6200EE")
             ZMKit.actionSDK(this)
-//            ZMKit.setColor("#FF018786","#FFBB86FC","#FF6200EE")
-//            ZMKit.initSDK("123456464")
         }
     }
 }

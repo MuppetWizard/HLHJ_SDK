@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/hlhj_gradual_bg"
-    tools:context=".common.HlhjMainActivity">
+    tools:context=".common.HlhjResultActivity">
     <RelativeLayout
         android:id="@+id/hlhj_rl_tittle"
         android:layout_width="match_parent"
@@ -33,9 +33,10 @@
         android:id="@+id/hlhj_pairing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="40dp"
         android:paddingStart="44dp"
-        android:paddingEnd="44dp">
+        android:paddingEnd="44dp"
+        android:layout_below="@id/hlhj_rl_tittle">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -107,20 +108,20 @@
                 android:background="@drawable/hlhj_btn_bg" />
         </LinearLayout>
     </RelativeLayout>
-    
-    <Button
-        android:id="@+id/hlhj_btn_start"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="@string/hlhj_start"
-        android:textColor="@color/hlhj_normal_primary"
-        android:background="@drawable/hlhj_btn_bg2"
-        android:layout_marginTop="60dp"
-        android:layout_below="@id/hlhj_pairing"
-        android:layout_centerHorizontal="true"/>
-    <ImageView
+    <TextView
+        android:id="@+id/hlhj_tv_result"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/hlhj_bg"
-        android:layout_alignParentBottom="true"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/hlhj_pairing"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="none"
+        android:textColor="@color/hlhj_white"
+        android:textSize="14sp"
+        android:background="@drawable/hlhj_tv_bg"/>
 </RelativeLayout>
