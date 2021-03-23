@@ -1,4 +1,4 @@
-package com.hjhl.animalMatching_SDK.model
+package com.hjhl.animalMatching_SDK.common.model
 
 /**
  * 配对mode
@@ -13,9 +13,9 @@ package com.hjhl.animalMatching_SDK.model
     }
  */
 data class MatchingMode(
-    val code: Int,
-    val data: Data,
-    val msg: String
+        val code: Int,
+        val data: Data,
+        val msg: String
 ) {
     data class Data(
         val data: String,

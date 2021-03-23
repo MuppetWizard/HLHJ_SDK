@@ -3,7 +3,7 @@
     package="com.hjhl.animalMatching_SDK">
 
     <application>
-        <activity android:name=".HlhjMainActivity"></activity>
+        <activity android:name=".common.HlhjMainActivity"></activity>
     </application>
 
 </manifest>

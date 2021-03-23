@@ -1,8 +1,8 @@
-package com.hjhl.animalMatching_SDK.model
+package com.hjhl.animalMatching_SDK.common.model
 
 import com.hjhl.animalMatching_SDK.R
 
-class Zodiac(val name: String, val icon: Int)
+data class Zodiac(var name: String, var icon: Int)
 
 private val zodiac = mapOf(
     "鼠" to Zodiac("鼠", R.mipmap.hlhj_rat),

@@ -2,10 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hlhj_rl_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/hlhj_gradual_bg"
-    tools:context=".HlhjMainActivity">
+    tools:context=".common.HlhjMainActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -60,7 +61,7 @@
                 android:id="@+id/hlhj_tv_men"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Null"
+                android:text="鼠"
                 android:textSize="14sp"
                 android:textColor="@color/hlhj_white"
                 android:drawableRight="@mipmap/hlhj_switch"
@@ -91,7 +92,7 @@
                 android:id="@+id/hlhj_tv_women"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Null"
+                android:text="牛"
                 android:textSize="14sp"
                 android:textColor="@color/hlhj_white"
                 android:drawableRight="@mipmap/hlhj_switch"

@@ -1,10 +1,9 @@
-package com.hjhl.animalMatching_SDK.network
+package com.hjhl.animalMatching_SDK.common.network
 
-import com.hjhl.animalMatching_SDK.base.Constants
+import com.hjhl.animalMatching_SDK.common.base.Constants
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
 object ServiceCreator {
 

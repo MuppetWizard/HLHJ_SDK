@@ -1,4 +1,4 @@
-package com.hjhl.animalMatching_SDK.base
+package com.hjhl.animalMatching_SDK.common.base
 
 object Constants {
     const val BASE_URL = "https://sdkapi.hlhjapp.com/"
