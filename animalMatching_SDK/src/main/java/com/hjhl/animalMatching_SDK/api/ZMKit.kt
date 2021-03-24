@@ -26,14 +26,28 @@ object ZMKit {
     /**
      * 设置主题色、渐变色等
      */
-    fun setColor(primaryColor: String = "#7EA3FA",
-                 startColor: String ="#7EA3FA",
-                 endColor: String ="#8154FF" ) {
-        bundle.apply {
-            putString("mainColor",primaryColor)
-            putString("startColor",startColor)
-            putString("endColor",endColor)
+    fun setColor(primaryColor: String,
+                 startColor: String,
+                 endColor: String ) {
+
+        if (!TextUtils.isEmpty(primaryColor)) {
+            bundle.putString("mainColor",primaryColor)
+        }else{
+            bundle.putString("mainColor","#7EA3FA")
         }
+
+        if (!TextUtils.isEmpty(primaryColor)) {
+            bundle.putString("startColor",startColor)
+        }else{
+            bundle.putString("startColor","#7EA3FA")
+        }
+
+        if (!TextUtils.isEmpty(primaryColor)) {
+            bundle.putString("endColor",endColor)
+        }else{
+            bundle.putString("endColor","#8154FF")
+        }
+
     }
 
     /**

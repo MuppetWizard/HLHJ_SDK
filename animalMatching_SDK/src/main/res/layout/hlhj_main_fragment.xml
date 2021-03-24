@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/hlhj_rl_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/hlhj_rl_bg"
     android:background="@drawable/hlhj_gradual_bg"
-    tools:context=".common.HlhjResultActivity">
+    tools:context=".common.HlhjMainFragment">
+
     <RelativeLayout
         android:id="@+id/hlhj_rl_tittle"
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         <ImageView
             android:id="@+id/hlhj_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:src="@mipmap/hlhj_left"
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
@@ -33,10 +33,9 @@
         android:id="@+id/hlhj_pairing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="135dp"
         android:paddingStart="44dp"
-        android:paddingEnd="44dp"
-        android:layout_below="@id/hlhj_rl_tittle">
+        android:paddingEnd="44dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -63,12 +62,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="鼠"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textColor="@color/hlhj_white"
+                android:drawableRight="@mipmap/hlhj_switch"
+                android:drawablePadding="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
-                 />
+                android:background="@drawable/hlhj_btn_bg" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -88,39 +93,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="牛"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textColor="@color/hlhj_white"
+                android:drawableRight="@mipmap/hlhj_switch"
+                android:drawablePadding="2dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/hlhj_btn_bg" />
         </LinearLayout>
     </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+
+    <Button
+        android:id="@+id/hlhj_btn_start"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/hlhj_start"
+        android:textColor="@color/hlhj_normal_primary"
+        android:background="@drawable/hlhj_btn_bg2"
+        android:layout_marginTop="60dp"
         android:layout_below="@id/hlhj_pairing"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="15dp"
-        android:paddingTop="15dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:background="@drawable/hlhj_tv_bg">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="配对结果"
-            android:textColor="@color/hlhj_white"
-            android:textSize="16sp"/>
-        <TextView
-            android:id="@+id/hlhj_tv_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="出现错误，暂无结果"
-            android:textColor="@color/hlhj_white"
-            android:textSize="14sp" />
-    </LinearLayout>
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/hlhj_bg"
+        android:layout_alignParentBottom="true"/>
+    <ProgressBar
+        android:id="@+id/hlhj_pb"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_below="@id/hlhj_rl_tittle"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>
