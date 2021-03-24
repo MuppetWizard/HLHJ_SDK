@@ -3,8 +3,10 @@ package com.hjhl.animalMatching_SDK.api
 import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
+import androidx.fragment.app.Fragment
 
 import com.hjhl.animalMatching_SDK.common.HlhjMainActivity
+import com.hjhl.animalMatching_SDK.common.HlhjMainFragment
 
 /**
  * des: 外部调用
@@ -51,10 +53,19 @@ object ZMKit {
     }
 
     /**
-     * 启动页面
+     * 使用Activity启动页面
      */
-    fun actionSDK(context: Context) {
+    fun actionFromActivity(context: Context) {
         HlhjMainActivity.actionStart(context, bundle)
+    }
+
+    /**
+     * 使用Fragment启动页面
+     */
+    fun actionFromFragment():Fragment {
+        val fragment = HlhjMainFragment()
+        fragment.arguments = bundle
+        return fragment
     }
 
 }

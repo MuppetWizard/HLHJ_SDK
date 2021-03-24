@@ -189,7 +189,6 @@ class HlhjMainActivity : HlhjBaseActivity() {
                             Log.e(Constants.TAG, "Failed!! see more: " + res)
                         }
 
-
                 }
             }
 
@@ -198,13 +197,7 @@ class HlhjMainActivity : HlhjBaseActivity() {
 
     private fun gotoPage(data: MatchingMode.Data) {
         HlhjResultActivity.actionStart(this,data.men,data.women,data.data,startColor,endColor)
-//        HlhjResultActivity.actionStart(this,"虎","马","哈哈哈")
         pb.visibility = View.GONE
-
-    }
-    private fun gotoPage() {
-//        HlhjResultActivity.actionStart(this,data.men,data.women,data.data)
-        HlhjResultActivity.actionStart(this,"虎","马","哈哈哈",startColor,endColor)
 
     }
 
